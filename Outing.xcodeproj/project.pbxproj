@@ -36,6 +36,7 @@
 		79D6CD2A215BB2E0009932C9 /* StudentPendingWarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CD29215BB2E0009932C9 /* StudentPendingWarden.swift */; };
 		79DC298221609655006F7FCB /* PendingsForWarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC298121609655006F7FCB /* PendingsForWarden.swift */; };
 		79DC29842160972B006F7FCB /* CustomCellPenWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC29832160972B006F7FCB /* CustomCellPenWar.swift */; };
+		79F5F67321AEBB8D002AFB55 /* Outing.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 79F5F66E21AEBB8D002AFB55 /* Outing.xcworkspace */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		79D6CD29215BB2E0009932C9 /* StudentPendingWarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentPendingWarden.swift; sourceTree = "<group>"; };
 		79DC298121609655006F7FCB /* PendingsForWarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingsForWarden.swift; sourceTree = "<group>"; };
 		79DC29832160972B006F7FCB /* CustomCellPenWar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellPenWar.swift; sourceTree = "<group>"; };
+		79F5F66E21AEBB8D002AFB55 /* Outing.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Outing.xcworkspace; sourceTree = "<group>"; };
 		F238A51D7E663A0602DBD213 /* Pods-Outing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Outing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Outing/Pods-Outing.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 		794B30D52158DC0800721F20 = {
 			isa = PBXGroup;
 			children = (
+				79F5F66E21AEBB8D002AFB55 /* Outing.xcworkspace */,
 				794B30E02158DC0800721F20 /* Outing */,
 				794B30DF2158DC0800721F20 /* Products */,
 				A291DA00201A3D4F5EC1BD0C /* Pods */,
@@ -222,6 +225,7 @@
 				794B30EC2158DC0800721F20 /* LaunchScreen.storyboard in Resources */,
 				794B30F42158DD1600721F20 /* GoogleService-Info.plist in Resources */,
 				794B30E92158DC0800721F20 /* Assets.xcassets in Resources */,
+				79F5F67321AEBB8D002AFB55 /* Outing.xcworkspace in Resources */,
 				794B30E72158DC0800721F20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -67,7 +67,7 @@
                         <outlet property="pwdField" destination="Hkk-4b-5Ao" id="sOz-4O-Nqc"/>
                         <outlet property="userNameField" destination="KBZ-Lo-GOw" id="dz1-Rg-BUC"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="conn" id="bhd-vD-gE6"/>
-                        <segue destination="ntN-Dg-W76" kind="show" identifier="conn2" id="6IP-Ze-KB4"/>
+                        <segue destination="Yuh-4g-0A0" kind="show" identifier="conn2" id="6IP-Ze-KB4"/>
                         <segue destination="dd0-XJ-WIW" kind="show" identifier="loginFWelcome" id="SZD-gJ-NQw"/>
                         <segue destination="32r-y0-24o" kind="show" identifier="warLog" id="UpW-ni-7iE"/>
                     </connections>
@@ -703,7 +703,7 @@
                     <connections>
                         <outlet property="pswdField" destination="mRv-dN-wki" id="6Ot-eE-xAy"/>
                         <outlet property="regdField" destination="ZOF-0u-If7" id="dJo-2q-r5Q"/>
-                        <segue destination="ntN-Dg-W76" kind="show" identifier="studconn1" id="VZ0-DI-5rH"/>
+                        <segue destination="Yuh-4g-0A0" kind="show" identifier="studconn1" id="VZ0-DI-5rH"/>
                         <segue destination="dd0-XJ-WIW" kind="show" identifier="signFWel" id="Hr9-lf-dkf"/>
                         <segue destination="32r-y0-24o" kind="show" identifier="WarSign" id="mji-WB-RQC"/>
                     </connections>
@@ -762,6 +762,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Bdw-qJ-PCS"/>
                     <connections>
                         <outlet property="photo" destination="HUR-ob-R3b" id="fWY-tU-aG8"/>
                         <outlet property="welcomeLabel" destination="TJL-qa-a8H" id="g8a-nj-1cN"/>
@@ -771,7 +772,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNs-Av-MR6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3764" y="162.3688155922039"/>
+            <point key="canvasLocation" x="4703.1999999999998" y="162.3688155922039"/>
         </scene>
         <!--Application Form-->
         <scene sceneID="XZI-tr-K2G">
@@ -1031,7 +1032,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X2m-2m-B7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4484" y="-130.88455772113943"/>
+            <point key="canvasLocation" x="5423.1999999999998" y="-130.88455772113943"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0u5-7A-FQy">
@@ -1649,6 +1650,24 @@
             </objects>
             <point key="canvasLocation" x="2676" y="-1936.2818590704649"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7we-gW-Ekl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yuh-4g-0A0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ROw-ER-AuW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ntN-Dg-W76" kind="relationship" relationship="rootViewController" id="d0R-CV-OFQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2io-Md-nTG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3764" y="162.3688155922039"/>
+        </scene>
     </scenes>
     <resources>
         <image name="check1" width="96" height="96"/>
@@ -1657,10 +1676,10 @@
         <image name="reject" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UpW-ni-7iE"/>
+        <segue reference="VZ0-DI-5rH"/>
         <segue reference="bhd-vD-gE6"/>
         <segue reference="SZD-gJ-NQw"/>
-        <segue reference="6IP-Ze-KB4"/>
+        <segue reference="UpW-ni-7iE"/>
         <segue reference="Jps-SZ-HYG"/>
         <segue reference="Ywt-dn-Ie2"/>
     </inferredMetricsTieBreakers>
