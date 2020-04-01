@@ -26,6 +26,7 @@ class Login:UIViewController    {
             Auth.auth().signIn(withEmail: x, password: pwdField.text!, completion: {
                 (result,error) in
                 if let res = result{
+                    
                     print("Login Sucessful")
                     if(self.userNameField.text?.hasPrefix("F"))! {
                         print("Something")
@@ -41,6 +42,7 @@ class Login:UIViewController    {
                     
                 }
                 else{
+                    self.showToast()
                     print("Login Error!!")
                 }
             })
@@ -49,6 +51,23 @@ class Login:UIViewController    {
             print("Enter details")
         }
         userNameField.resignFirstResponder()
+    }
+    
+    func showToast(){
+        let label = UILabel()
+        label.frame = CGRect(x: 0, y:view.frame.height-100, width:view.frame.width-50,height:0)
+        label.text = "Login Error"
+        label.textAlignment = .center
+        label.sizeToFit()
+        label.font = UIFont(name: "Font-name", size: 17)
+        label.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        label.textColor = UIColor.white
+        label.alpha = 1.0
+        label.layer.cornerRadius = 5
+        label.clipsToBounds = true
+        label.frame.origin.x = (view.frame.width/2)-(label.frame.width/2)
+        self.view.addSubview(label)
+        
     }
     
     @IBAction func signupbtn(_ sender: Any) {

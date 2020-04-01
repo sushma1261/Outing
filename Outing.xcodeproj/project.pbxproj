@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58BA717F69D5C778B837BE7B /* Pods_Outing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 295F618815556581852A45EA /* Pods_Outing.framework */; };
+		7907F51121C239B900194660 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7907F51021C239B900194660 /* MenuViewController.swift */; };
 		794B30E22158DC0800721F20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794B30E12158DC0800721F20 /* AppDelegate.swift */; };
 		794B30E42158DC0800721F20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794B30E32158DC0800721F20 /* ViewController.swift */; };
 		794B30E72158DC0800721F20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794B30E52158DC0800721F20 /* Main.storyboard */; };
@@ -36,12 +37,14 @@
 		79D6CD2A215BB2E0009932C9 /* StudentPendingWarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CD29215BB2E0009932C9 /* StudentPendingWarden.swift */; };
 		79DC298221609655006F7FCB /* PendingsForWarden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC298121609655006F7FCB /* PendingsForWarden.swift */; };
 		79DC29842160972B006F7FCB /* CustomCellPenWar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DC29832160972B006F7FCB /* CustomCellPenWar.swift */; };
+		79DDCE6321D8C9E400397D69 /* DelayCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDCE6221D8C9E400397D69 /* DelayCustomCell.swift */; };
 		79F5F67321AEBB8D002AFB55 /* Outing.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 79F5F66E21AEBB8D002AFB55 /* Outing.xcworkspace */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		295F618815556581852A45EA /* Pods_Outing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Outing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A63089587FCD84DA98A2662 /* Pods-Outing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Outing.release.xcconfig"; path = "Pods/Target Support Files/Pods-Outing/Pods-Outing.release.xcconfig"; sourceTree = "<group>"; };
+		7907F51021C239B900194660 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		794B30DE2158DC0800721F20 /* Outing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Outing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		794B30E12158DC0800721F20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		794B30E32158DC0800721F20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 		79D6CD29215BB2E0009932C9 /* StudentPendingWarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentPendingWarden.swift; sourceTree = "<group>"; };
 		79DC298121609655006F7FCB /* PendingsForWarden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingsForWarden.swift; sourceTree = "<group>"; };
 		79DC29832160972B006F7FCB /* CustomCellPenWar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellPenWar.swift; sourceTree = "<group>"; };
+		79DDCE6221D8C9E400397D69 /* DelayCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayCustomCell.swift; sourceTree = "<group>"; };
 		79F5F66E21AEBB8D002AFB55 /* Outing.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Outing.xcworkspace; sourceTree = "<group>"; };
 		F238A51D7E663A0602DBD213 /* Pods-Outing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Outing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Outing/Pods-Outing.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,12 +125,14 @@
 				794B30F72158F44500721F20 /* Login.swift */,
 				794B30F921591A2D00721F20 /* StudentProfile.swift */,
 				794B30FB21593CB200721F20 /* ApplicationForm.swift */,
+				7907F51021C239B900194660 /* MenuViewController.swift */,
 				79CEE84C2159FF3F00C60C4C /* FacultyWelcome.swift */,
 				79CEE84E215A032500C60C4C /* FacultyProfile.swift */,
 				79CEE850215A08B800C60C4C /* FacultyMain.swift */,
 				79CEE852215A0B5E00C60C4C /* RequestsForFaculty.swift */,
 				79CEE854215A0E0600C60C4C /* CustomCell.swift */,
 				79CEE856215A2F2E00C60C4C /* StudentDetailsOfPending.swift */,
+				79DDCE6221D8C9E400397D69 /* DelayCustomCell.swift */,
 				79D6CD17215B8E1A009932C9 /* FacultyApproved.swift */,
 				79D6CD19215B8E8E009932C9 /* FacultyRejected.swift */,
 				79D6CD1B215BA28E009932C9 /* CustomCell2.swift */,
@@ -296,8 +302,10 @@
 				79D6CD1C215BA28E009932C9 /* CustomCell2.swift in Sources */,
 				79D6CD20215BA6DA009932C9 /* WardenWelcome.swift in Sources */,
 				79D6CD1E215BA399009932C9 /* CustomCellApp.swift in Sources */,
+				79DDCE6321D8C9E400397D69 /* DelayCustomCell.swift in Sources */,
 				79D6CD22215BA918009932C9 /* WarderProfile.swift in Sources */,
 				79DC298221609655006F7FCB /* PendingsForWarden.swift in Sources */,
+				7907F51121C239B900194660 /* MenuViewController.swift in Sources */,
 				79CEE857215A2F2E00C60C4C /* StudentDetailsOfPending.swift in Sources */,
 				79D6CD26215BAD99009932C9 /* RequestsForWarden.swift in Sources */,
 				79CEE851215A08B800C60C4C /* FacultyMain.swift in Sources */,

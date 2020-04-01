@@ -16,15 +16,46 @@ class FacultyRejected: UIViewController,UITableViewDelegate,UITableViewDataSourc
     
     var ref: DatabaseReference!
     
+    @IBOutlet weak var dateText: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         table1.dataSource  = self
         table1.delegate = self
-        getDetails()
+        //getDetails()
     }
     
+    
+    @IBAction func searchBtn(_ sender: Any) {
+        regdArr.removeAll()
+        ref.child("rejected").observeSingleEvent(of: DataEventType.value, with: { snapshot in
+            var i:Int = 0
+            print(snapshot)
+            for rest in snapshot.children.allObjects as! [DataSnapshot] {
+                for x in rest.children.allObjects as! [DataSnapshot] {
+                    let t = x.value as! [String: Any]
+                    let dd1 = t["from_date"] as! String
+                    let ddText = self.dateText.text!
+                    if(dd1 == ddText) {
+                        print("Date Searched")
+                        print(t["regnum"])
+                        self.regdArr.insert(t["regnum"] as! String, at: i)
+                        i = i + 1
+                        self.table1.reloadData()
+                    }
+                }
+            }
+            
+        })
+
+        
+    }
+    
+    
     func getDetails() {
-        ref = Database.database().reference()
+        
         ref.child("rejected").observeSingleEvent(of: DataEventType.value, with: { snapshot in
             var i:Int = 0
             //print(snapshot)

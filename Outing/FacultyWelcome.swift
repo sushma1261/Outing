@@ -22,6 +22,26 @@ class FacultyWelcome : UIViewController {
         self.performSegue(withIdentifier: "facprof", sender: nil)
     }
     
+    
+    @IBOutlet weak var leadConst: NSLayoutConstraint!
+    
+    var menuShowing = false
+    
+    
+    
+    @IBAction func menuBtn(_ sender: Any) {
+        if(menuShowing){
+            leadConst.constant = -155
+        }
+        else{
+            leadConst.constant = 0
+        }
+        
+        menuShowing = !menuShowing
+        
+    }
+    
+    
     @IBAction func logoutBtn(_ sender: Any) {
         let firebaseAuth = Auth.auth()
         do {

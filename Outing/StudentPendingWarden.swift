@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseStorage
 
 class StudentPendingWarden:UIViewController {
     var regdNum:String = ""
@@ -26,6 +27,8 @@ class StudentPendingWarden:UIViewController {
     @IBOutlet weak var regNum: UILabel!
     
     @IBOutlet weak var photo: UIImageView!
+    
+    var imgName = ""
     
     @IBOutlet weak var nameL: UILabel!
     
@@ -95,8 +98,9 @@ class StudentPendingWarden:UIViewController {
                 
                 self.ref.child("granted").child(self.regdNum).childByAutoId().setValue(data)
                 self.ref.child("update").child(self.regdNum).setValue(data)
-                //self.ref.child("approved").child(self.regdNum).setValue(data)
                 self.ref.child("approved").child(self.regdNum).removeValue()
+                self.ref.child("pending").child(self.regdNum).removeValue()
+                
             }
             
             
@@ -125,7 +129,6 @@ class StudentPendingWarden:UIViewController {
                 data["year"] = self.stuYear as AnyObject
                 
                 self.ref.child("pending").child(self.regdNum).setValue(data)
-                //self.ref.child("approved").child(self.regdNum).setValue(data)
                 self.ref.child("approved").child(self.regdNum).removeValue()
             }
             
@@ -158,8 +161,10 @@ class StudentPendingWarden:UIViewController {
                 data["year"] = self.stuYear as AnyObject
                 
                 self.ref.child("rejected").child(self.regdNum).childByAutoId().setValue(data)
-                //self.ref.child("rejected").child(self.regdNum).setValue(data)
+            
                 self.ref.child("approved").child(self.regdNum).removeValue()
+                self.ref.child("pending").child(self.regdNum).removeValue()
+                
             }
             else{
                 print("Error")
@@ -180,8 +185,31 @@ class StudentPendingWarden:UIViewController {
             //print("Name:"+name)
             regNum.text = regd
             regdNum = regd
+            imgName = regd+".jpg"
+
             print("regd:" + regd)
         }
+        
+        let storage = Storage.storage().reference()
+        let tempImageRef = storage.child(imgName)
+        tempImageRef.getData(maxSize: 1*1000*1000) {
+            (data,error) in
+            if error == nil{
+                self.photo.layer.borderWidth = 1
+                self.photo.layer.masksToBounds = false
+                self.photo.layer.borderColor = UIColor.white.cgColor
+                self.photo.layer.cornerRadius = self.photo.frame.height/2
+                self.photo.clipsToBounds = true
+                self.photo.image = UIImage(data:data!)
+                print(data!)
+            }
+            else{
+                print("Error!!!")
+                print(error?.localizedDescription)
+            }
+        }
+        
+
         
         ref.child("granted").child(regdNum).observeSingleEvent(of: DataEventType.value, with: { snapshot in
             

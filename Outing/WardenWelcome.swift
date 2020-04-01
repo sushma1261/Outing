@@ -20,6 +20,24 @@ class WardenWelcome: UIViewController{
     @IBAction func profWarBtn(_ sender: Any) {
     }
     
+    
+    @IBOutlet weak var leadConst: NSLayoutConstraint!
+    
+    var menuShowing = false
+    
+    @IBAction func slideBtn(_ sender: Any) {
+        
+        if(menuShowing){
+            leadConst.constant = -148
+        }
+        else{
+            leadConst.constant = 0
+        }
+        
+        menuShowing = !menuShowing
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let regd:String = (UserDefaults.standard.value(forKey:"regd") as? String) {
